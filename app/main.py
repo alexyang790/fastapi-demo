@@ -21,4 +21,9 @@ DB = "nem2p"
 def zone_apex():
     return {"Hello": "Hello API", "album_endpoint":"/albums","static_endpoint":"/static"}
 
+@app.get("/add/{number_1}/{number_2}")
+def add_me(number_1: int, number_2: int):
+    sum = number_1 + number_2
+    return {"sum": sum}
+
 # More will go here TBD
